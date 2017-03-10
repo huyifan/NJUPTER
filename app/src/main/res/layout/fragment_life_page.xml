@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_bottom_color">
+
+    <!--<com.example.hugo.njupter.widget.convenientbanner.ConvenientBanner-->
+        <!--android:id="@+id/banner"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="300px"-->
+        <!--android:layout_marginBottom="1px"-->
+         <!--/>-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300px">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1px"/>
+
+
+        <com.shizhefei.view.indicator.FixedIndicatorView
+            android:id="@+id/banner_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="right|bottom" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#fff"
+        android:padding="10px"
+        android:layout_marginTop="1px"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:src="@drawable/ic_life_helper"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:textSize="38px"
+            android:textColor="#000"
+            android:text="生活Tips"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="1px"
+        android:background="#fff"
+       >
+
+        <!--第一个icon 失物招领-->
+        <LinearLayout
+            android:id="@+id/lost_ly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="5px"
+            android:background="@drawable/ripple_bg"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:src="@drawable/ic_lost"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="失误招领"
+                android:textSize="24px"
+                android:layout_marginTop="5px"
+                android:textColor="@color/tab_life_tips_text_color"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#c6c6c6"/>
+
+        <!--第二个icon 二手市场-->
+        <LinearLayout
+            android:id="@+id/second_ly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="5px"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_bg">
+            <ImageView
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:src="@drawable/ic_second"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="二手市场"
+                android:textSize="24px"
+                android:layout_marginTop="5px"
+                android:textColor="@color/tab_life_tips_text_color"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#c6c6c6"/>
+
+        <!--第三个icon 活动预告-->
+        <LinearLayout
+            android:id="@+id/activity_ly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="5px"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_bg">
+            <ImageView
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:src="@drawable/ic_yugao"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="活动预告"
+                android:textSize="24px"
+                android:layout_marginTop="5px"
+                android:textColor="@color/tab_life_tips_text_color"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1px"
+        android:orientation="vertical"
+        android:gravity="center"
+      >
+
+        <ImageView
+            android:layout_width="190px"
+            android:layout_height="190px"
+            android:src="@drawable/ic_waiting"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="更多功能敬请期待"
+            android:id="@+id/tv_waiting" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

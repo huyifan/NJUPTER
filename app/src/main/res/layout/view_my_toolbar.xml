@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/titlebar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="130px"
+        android:elevation="10dp"
+        android:background="@color/life_tab"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/header_left_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60px"
+            android:layout_marginLeft="30px"
+            android:gravity="center"
+            android:layout_alignParentLeft="true">
+
+            <ImageView
+                android:id="@+id/tool_bar_menu"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:src="@drawable/ic_menu_white" />
+
+            <TextView
+                android:id="@+id/header_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20px"
+                android:gravity="center_vertical"
+                android:text="掌上南邮"
+                android:textColor="#fff"
+                android:textSize="@dimen/title_bar_text_size" />
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

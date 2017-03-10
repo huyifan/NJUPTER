@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_bottom_color">
+
+    <ImageView
+        android:layout_width="720px"
+        android:background="@drawable/img_look_header"
+        android:layout_height="400px" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#fff"
+        android:padding="10px"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:background="@drawable/ic_quick_look"
+            android:layout_width="50px"
+            android:layout_height="50px" />
+
+        <TextView
+            android:text="便捷查询"
+            android:textColor="#120573"
+            android:layout_marginLeft="20px"
+            android:textSize="38px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="1px"
+        android:background="#fff">
+
+        <!--第一个icon 失物招领-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="5px"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:src="@drawable/ic_look_run"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="晨跑记录"
+                android:textSize="24px"
+                android:layout_marginTop="5px"
+                android:textColor="@color/tab_life_tips_text_color"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#c6c6c6"/>
+
+        <!--第二个icon 二手市场-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="5px"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:src="@drawable/ic_look_book"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="图书检索"
+                android:textSize="24px"
+                android:layout_marginTop="5px"
+                android:textColor="@color/tab_life_tips_text_color"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#c6c6c6"/>
+
+        <!--第三个icon 活动预告-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="5px"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:src="@drawable/ic_look_borrow"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="借书记录"
+                android:textSize="24px"
+                android:layout_marginTop="5px"
+                android:textColor="@color/tab_life_tips_text_color"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

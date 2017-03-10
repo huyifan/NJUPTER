@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0E75A6</color>
+    <color name="colorPrimaryDark">#0E74A6</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorWhite">#fff</color>
+
+
+    <color name="tab_bg_color">#36474f</color>
+    <color name="tab_life_tips_text_color">#dc282828</color>
+    <color name="bg_bottom_color">#d6d4d3d3</color>
+
+    <color name="life_tab">#36474f</color>
+    <color name="question_tab">#1296db</color>
+    <color name="look_tab">#515151</color>
+    <color name="college_tab">#13227a</color>
+    <color name="user_tab">#8a8a8a</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="text_login_hint_color">#f4ea2a</color>
+
+</resources>

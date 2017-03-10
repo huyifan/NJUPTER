@@ -1,0 +1,239 @@
+<com.mxn.soul.flowingdrawer_core.LeftDrawerLayout
+    android:id="@+id/id_drawerlayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    >
+
+    <!--content-->
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_part"
+            android:layout_below="@+id/toolbar"
+
+            />
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/view_my_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+        <!--<ImageView-->
+            <!--android:layout_width="160px"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginBottom="90px"-->
+            <!--android:src="@drawable/ic_circle" />-->
+
+
+
+        <RelativeLayout
+            android:id="@+id/bottom_part"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_bar_height"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+
+                <View
+                    android:id="@+id/background_overlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"/>
+
+                <!--底部的5个button-->
+                <LinearLayout
+                    android:id="@+id/bottom_bar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:id="@+id/rela_life"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+
+                            >
+
+                            <ImageView
+                                android:id="@+id/img_tab_life"
+                                android:layout_width="50px"
+                                android:layout_height="46px"
+                                android:src="@drawable/click_life"
+                                />
+
+
+                            <TextView
+                                android:id="@+id/tv_tab_life"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="柚生活"
+                                android:textColor="#fff"
+                                android:textSize="@dimen/tab_text_size"
+                                android:layout_marginTop="4px"
+
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/rela_answer"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/img_tab_question"
+                                android:layout_width="50px"
+                                android:layout_height="46px"
+                                android:src="@drawable/click_question" />
+
+                            <TextView
+                                android:id="@+id/tv_tab_question"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="柚问答"
+                                android:textColor="#fff"
+                                android:textSize="@dimen/tab_text_size"
+                                android:layout_marginTop="4px"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/eye_rela"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/img_tab_look"
+                                android:layout_width="50px"
+                                android:layout_height="46px"
+                                android:layout_marginTop="1px"
+                                android:src="@drawable/click_look"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_tab_look"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="柚查询"
+                                android:textColor="#fff"
+                                android:textSize="@dimen/tab_text_size"
+                                android:layout_marginTop="4px"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/rela_college"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/img_tab_college"
+                                android:layout_width="50px"
+                                android:layout_height="46px"
+                                android:src="@drawable/click_college" />
+
+                            <TextView
+                                android:id="@+id/tv_tab_college"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="柚学院"
+                                android:textColor="#fff"
+                                android:textSize="@dimen/tab_text_size"
+                                android:layout_below="@+id/img_tab_college"
+                                android:layout_marginTop="4px"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/rela_user"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/img_tab_user"
+                                android:layout_width="50px"
+                                android:layout_height="46px"
+                                android:src="@drawable/click_user" />
+
+                            <TextView
+                                android:id="@+id/tv_tab_user"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="柚子中心"
+                                android:textColor="#fff"
+                                android:textSize="@dimen/tab_text_size"
+                                android:layout_below="@+id/img_tab_user"
+                                android:layout_marginTop="4px"
+                                />
+                        </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+    <!--menu-->
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:clipChildren="false"
+
+        >
+        <com.mxn.soul.flowingdrawer_core.FlowingView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <FrameLayout
+            android:id="@+id/id_container_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="25dp"
+            android:paddingRight="10dp"
+            />
+    </RelativeLayout>
+
+</com.mxn.soul.flowingdrawer_core.LeftDrawerLayout>
