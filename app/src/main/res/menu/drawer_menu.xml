@@ -32,6 +32,6 @@
             android:title="Settings" />
         <item
             android:id="@+id/menu_about"
-            android:title="About" />
+            android:title="退出登录" />
     </group>
 </menu>

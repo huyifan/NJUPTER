@@ -31,6 +31,11 @@ public class TimeUtils {
         return dateFormat.format(new Date(timeInMillis));
     }
 
+    public static String getTime(SimpleDateFormat dateFormat){
+        long time=System.currentTimeMillis();
+        return dateFormat.format(new Date(time));
+    }
+
     public static String dtFormat(Date date, String dateFormat) {
         return getFormat(dateFormat).format(date);
     }
@@ -165,5 +170,18 @@ public class TimeUtils {
     public static int getDayNum(Date preDate, Date nextDate) {
         int dayNum = (int) ((nextDate.getTime() - preDate.getTime()) / (24 * 3600 * 1000));
         return dayNum;
+    }
+
+    public static String getRecentTime(long l) {
+        long current =getCurrentTimeInLong()-l;
+        int second =(int) (current%1000);
+        if(second<60){
+            return "1分钟前";
+        }
+        else if(second<3600){
+            return String.valueOf(second%60)+"分钟前";
+        }else{
+            return String.valueOf(second%3600)+"小时前";
+        }
     }
 }

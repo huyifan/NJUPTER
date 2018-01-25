@@ -4,9 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/contain_text"
-        android:text="123"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <com.example.hugo.njupter.widget.MySwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/my_list"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_width="768px"
+            android:layout_height="match_parent"/>
+
+
+        <TextView
+            android:id="@+id/empty_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂无数据"
+            android:layout_centerInParent="true"/>
+
+    </com.example.hugo.njupter.widget.MySwipeRefreshLayout>
+
 </LinearLayout>

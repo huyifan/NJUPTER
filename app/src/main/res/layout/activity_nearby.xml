@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/title_bar"/>
+    <LinearLayout
+        android:id="@+id/empty_view1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/tv_result"
+            android:text="附近暂时没有用户"
+            android:textSize="60px"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <com.example.hugo.njupter.widget.MySwipeRefreshLayout
+        android:id="@+id/util_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/uitl_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.example.hugo.njupter.widget.MySwipeRefreshLayout>
+
+
+</LinearLayout>

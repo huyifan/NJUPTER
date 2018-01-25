@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/titlebar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/life_tab"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/header_left_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10px">
+
+            <ImageView
+                android:id="@+id/title_back"
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:layout_marginLeft="30px"
+                android:src="@drawable/ic_back" />
+
+            <ImageView
+                android:id="@+id/tool_bar_menu"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="170px"
+                android:src="@drawable/ic_lost" />
+
+            <TextView
+                android:id="@+id/header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="5px"
+                android:text="失物招领"
+                android:textColor="#fff"
+                android:textSize="@dimen/title_bar_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

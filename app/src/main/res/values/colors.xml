@@ -20,4 +20,12 @@
     <color name="black_overlay">#66000000</color>
     <color name="text_login_hint_color">#f4ea2a</color>
 
+    <!-- 下拉刷新时，颜色值 -->
+    <color name="swiperefresh_color1">#ff00ddff</color>
+    <color name="swiperefresh_color2">#ffffbb33</color>
+    <color name="swiperefresh_color3">#ffff4444</color>
+    <color name="swiperefresh_color4">#ffaa66cc</color>
+
+    <color name="list_item_background_pressed">#FCFCFC</color>
+
 </resources>

@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_second_market"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.hugo.njupter.activity.SecondMarketActivity">
-
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/refresh_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#d28585"
-        android:orientation="vertical"
-        android:layout_below="@+id/titlebar_layout"
-        >
 
 
 
         <com.example.hugo.njupter.widget.MyViewPager
             android:id="@+id/lost_view_page"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:layout_below="@id/titlebar_layout">
 
             <android.support.v4.view.PagerTabStrip
                 android:id="@+id/my_pager_tab_strip"
@@ -28,12 +21,12 @@
                 android:layout_height="wrap_content"
                 android:background="@color/life_tab"
                 android:padding="5px"
+                android:layout_below="@+id/titlebar_layout"
                 />
+        </com.example.hugo.njupter.widget.MyViewPager>
 
-            </com.example.hugo.njupter.widget.MyViewPager>
 
 
-    </android.support.v4.widget.SwipeRefreshLayout>
 
     <LinearLayout
         android:id="@+id/titlebar_layout"
@@ -82,7 +75,6 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1px"
-            android:layout_marginTop="10px"
             android:background="#6effffff" />
 
         <!--<LinearLayout-->
@@ -125,6 +117,17 @@
             android:layout_height="2px"
             android:background="#fff" />
     </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="200dp"
+        android:layout_height="200px"
+        app:backgroundTint="#3a3b3b"
+        app:rippleColor="#33728dff"
+        android:src="@drawable/ic_adds"
+        android:id="@+id/bt_add_second"
+        android:layout_marginLeft="600px"
+        android:layout_marginTop="1050px"
+        />
 
 
 </RelativeLayout>

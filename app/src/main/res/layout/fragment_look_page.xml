@@ -6,7 +6,7 @@
     android:background="@color/bg_bottom_color">
 
     <ImageView
-        android:layout_width="720px"
+        android:layout_width="match_parent"
         android:background="@drawable/img_look_header"
         android:layout_height="400px" />
 

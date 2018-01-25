@@ -36,7 +36,9 @@ import com.example.hugo.njupter.fragment.mainTab.CollegeFragment;
 import com.example.hugo.njupter.fragment.mainTab.LifePageFragment;
 import com.example.hugo.njupter.fragment.mainTab.LookPageFragment;
 import com.example.hugo.njupter.fragment.mainTab.QuestionAnswerFragment;
+import com.example.hugo.njupter.fragment.mainTab.QuestionAnswerFragment_;
 import com.example.hugo.njupter.fragment.mainTab.UserCenterFragment;
+import com.example.hugo.njupter.fragment.mainTab.UserCenterFragment_;
 import com.mxn.soul.flowingdrawer_core.FlowingView;
 import com.mxn.soul.flowingdrawer_core.LeftDrawerLayout;
 
@@ -76,7 +78,7 @@ public class MainActivity extends BasicActivity implements View.OnClickListener 
     private LinearLayout collegeRy;
     private LinearLayout userRy;
 
-    private FragmentManager fragmentManager = getSupportFragmentManager();
+    private final FragmentManager fragmentManager = getSupportFragmentManager();
     private LifePageFragment lifeFragment;
     private QuestionAnswerFragment questionFragment;
     private CollegeFragment collegeFragment;
@@ -89,15 +91,15 @@ public class MainActivity extends BasicActivity implements View.OnClickListener 
     private View backgroundOverlay;
 
     private RelativeLayout toolBar;
-    private boolean isSameTab=false;
-
+    private int lastTab=R.id.rela_life;
+    private int flag=0;
     //尺寸
     //  private final int sixDps=dpToPixel(getBaseContext(), 6);
 //    private final int eightDps=dpToPixel(MainActivity.this, 8);
 //    private final int sixteenDps=dpToPixel(MainActivity.this, 16);
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //初始化顶部导航栏
@@ -122,6 +124,8 @@ public class MainActivity extends BasicActivity implements View.OnClickListener 
      * 初始化View
      */
     private void initViews() {
+
+
         lifeImage = (ImageView) findViewById(R.id.img_tab_life);
         lifeTextView = (TextView) findViewById(R.id.tv_tab_life);
         questionImage = (ImageView) findViewById(R.id.img_tab_question);
@@ -175,21 +179,37 @@ public class MainActivity extends BasicActivity implements View.OnClickListener 
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.rela_life:
-                setSelect(1);
+                if(lastTab!=v.getId()){
+                    lastTab=v.getId();
+                    setSelect(1);
+                }
+
                 break;
             case R.id.rela_answer:
-                setSelect(2);
+                if(lastTab!=v.getId()){
+                    lastTab=v.getId();
+                    setSelect(2);
+                }
                 break;
             case R.id.eye_rela:
-                setSelect(3);
+                if(lastTab!=v.getId()){
+                    lastTab=v.getId();
+                    setSelect(3);
+                }
 
                 break;
             case R.id.rela_college:
-                setSelect(4);
+                if(lastTab!=v.getId()){
+                    lastTab=v.getId();
+                    setSelect(4);
+                }
 
                 break;
             case R.id.rela_user:
-                setSelect(5);
+                if(lastTab!=v.getId()){
+                    lastTab=v.getId();
+                    setSelect(5);
+                }
 
                 break;
         }
@@ -197,7 +217,7 @@ public class MainActivity extends BasicActivity implements View.OnClickListener 
 
     public void setSelect(final int select) {
         final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
+       // fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
         //重置所有的图标
         resetImage();
         hiddenAllFragmemt(fragmentTransaction);
@@ -209,14 +229,14 @@ public class MainActivity extends BasicActivity implements View.OnClickListener 
             public void onAnimationStart(Animator animation) {
                 switch (select) {
                     case 1:
-                        isSameTab=checkIsSameTab(getBackgroundColor(toolBar),R.color.life_tab);
+                        //isSameTab=checkIsSameTab(getBackgroundColor(toolBar),R.color.life_tab);
                         animateBGColorChange(lifeRy, ContextCompat.getColor(context, R.color.life_tab));
 
                         animateScale(ACTIVE_SCALE, activeAlpha, lifeRy);
                         titleText.setText("掌上南邮·柚生活");
                         break;
                     case 2:
-                        isSameTab=checkIsSameTab(getBackgroundColor(toolBar),R.color.question_tab);
+                        //isSameTab=checkIsSameTab(getBackgroundColor(toolBar),R.color.question_tab);
 
                         animateBGColorChange(questionRy, ContextCompat.getColor(context, R.color.question_tab));
 
@@ -224,7 +244,7 @@ public class MainActivity extends BasicActivity implements View.OnClickListener 
                         titleText.setText("掌上南邮·柚问答");
                         break;
                     case 3:
-                        isSameTab=checkIsSameTab(getBackgroundColor(toolBar),R.color.look_tab);
+                        //isSameTab=checkIsSameTab(getBackgroundColor(toolBar),R.color.look_tab);
 
                         animateBGColorChange(lookRy, ContextCompat.getColor(context, R.color.look_tab));
 
@@ -232,7 +252,7 @@ public class MainActivity extends BasicActivity implements View.OnClickListener 
                         titleText.setText("掌上南邮·柚查查");
                         break;
                     case 4:
-                        isSameTab=checkIsSameTab(getBackgroundColor(toolBar),R.color.college_tab);
+                       // isSameTab=checkIsSameTab(getBackgroundColor(toolBar),R.color.college_tab);
 
                         animateBGColorChange(collegeRy, ContextCompat.getColor(context, R.color.college_tab));
 
@@ -240,7 +260,7 @@ public class MainActivity extends BasicActivity implements View.OnClickListener 
                         titleText.setText("掌上南邮·柚学院");
                         break;
                     case 5:
-                        isSameTab=checkIsSameTab(getBackgroundColor(toolBar),R.color.user_tab);
+                       // isSameTab=checkIsSameTab(getBackgroundColor(toolBar),R.color.user_tab);
 
                         animateBGColorChange(userRy, ContextCompat.getColor(context, R.color.user_tab));
 
@@ -273,7 +293,7 @@ public class MainActivity extends BasicActivity implements View.OnClickListener 
                     questionImage.setImageResource(R.drawable.ic_question_selected);
                     questionTextView.setTextColor(Color.YELLOW);
                     if (questionFragment == null) {
-                        questionFragment = new QuestionAnswerFragment();
+                        questionFragment = QuestionAnswerFragment_.builder().build();
                         fragmentTransaction.add(R.id.fragment_container, questionFragment);
                     } else {
                         fragmentTransaction.show(questionFragment);
@@ -285,10 +305,12 @@ public class MainActivity extends BasicActivity implements View.OnClickListener 
 
                     lookImage.setImageResource(R.drawable.ic_look_select);
                     lookTextView.setTextColor(Color.YELLOW);
-                    if (lookPageFragment == null) {
+                    if (lookPageFragment == null){
                         lookPageFragment = new LookPageFragment();
-                        fragmentTransaction.add(R.id.fragment_container, lookPageFragment);
+                        fragmentTransaction.add(R.id.fragment_container,lookPageFragment);
+
                     } else {
+                     //   fragmentTransaction.replace(R.id.fragment_container, lookPageFragment);
                         fragmentTransaction.show(lookPageFragment);
                     }
                     fragmentTransaction.commit();
@@ -307,16 +329,15 @@ public class MainActivity extends BasicActivity implements View.OnClickListener 
                     fragmentTransaction.commit();
                     break;
                 case 5:
-
                     userImage.setImageResource(R.drawable.ic_user_selected);
-                    userTextView.setTextColor(Color.YELLOW);
-
-                    if (userFragment == null) {
-                        userFragment = new UserCenterFragment();
+                    if(userFragment==null){
+                        userFragment = UserCenterFragment_.builder().build();
                         fragmentTransaction.add(R.id.fragment_container, userFragment);
-                    } else {
+                    }else{
                         fragmentTransaction.show(userFragment);
                     }
+
+                    userTextView.setTextColor(Color.YELLOW);
                     fragmentTransaction.commit();
                     break;
             }

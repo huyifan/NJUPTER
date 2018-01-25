@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<include
+    layout="@layout/title_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="200dp"
+            android:layout_height="200px"
+            app:backgroundTint="#3a3b3b"
+            app:rippleColor="#33728dff"
+            android:src="@drawable/ic_adds"
+            android:id="@+id/bt_add_lost"
+            android:layout_marginLeft="600px"
+            android:layout_marginTop="1000px"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_no_lost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="暂无失物~"
+            android:textSize="65px"
+            android:textColor="#232323"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_lost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
